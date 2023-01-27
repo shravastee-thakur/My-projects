@@ -4,12 +4,14 @@ int main ()
 {
 int value1, choice;
 float amount;
-float dollar, rupee, euro, yen, yuan;  
+float dollar, rupee, euro, yen, yuan; 
+char ans; 
 
   
 cout << "***** Welcome to Currency Converter Application ***** \n\n";
 cout << "You can convert Rupee, Euro, Yen, Yuan \n\n";
 
+runagain:
 
 cout << "Following are the choices: \n\n";
 cout << "Enter 1: Rupee\n";
@@ -106,13 +108,12 @@ switch (choice)
         cout << "Please enter a correct value" << endl;
         
 }
+cout << "Would you like to run the program again? (Y/N) ";
+cin >> ans;
+if (ans == 'y' or ans == 'Y')
+{
+goto runagain;
+}
 
 return 0;   
 }
-
-
-
-
-
- 
-  
